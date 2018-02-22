@@ -1,4 +1,4 @@
-angular.module('app').controller('reservationController', [
+angular.module('app').controller('ContactController', [
     function() {
         var vm = this;
         vm.message = function() {

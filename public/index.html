@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+
+<html ng-app="app">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ChrisVic Restaurant</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <base href="/" />
 </head>
 
@@ -31,12 +26,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="/reserve">RESERVE TABLE</a></li>
-                    <li><a href="#">ORDER ONLINE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li class="active"><a href="/">HOME <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="/reservation">RESERVE TABLE</a></li>
+                    <li><a href="/order">ORDER ONLINE</a></li>
+                    <li><a href="/contact"> CONTACT </a> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Sign Up <i class="fa fa-user-plus"></i></a></li>
@@ -48,14 +42,18 @@
         <!-- /.container-fluid -->
     </nav>
     <div class="container">
+        <h1>Welcome to ChrisVic Restaurant</h1>
         <div ng-view></div>
     </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/app/app.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/routes.js"></script>
+    <script src="./app/components/home/HomeController.js"></script>
+    <script src="./app/components/reservation/reservationController.js"></script>
+    <script src="./app/components/menu/menuController.js"></script>
+    <script src="./app/components/contact/contactController.js"></script>
+    <script src="./app/components/order/orderController.js"></script>
 </body>
 
 </html>
