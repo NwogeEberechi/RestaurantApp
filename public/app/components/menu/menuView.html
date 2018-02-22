@@ -1,6 +1,29 @@
-<h2>Menu</h2>
-
-<div ng-repeat="menu in vm.menu">
-    {{menu}}
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentaion" ng-class="{active:vm.isSelected(1)}">
+        <a aria-controls=" all menu" role="tab" ng-click="vm.selectMenu(1)">Menu</a>
+    </li>
+    <li role="presentaion" ng-class="{active:vm.isSelected(2)}">
+        <a aria-controls=" dessert" role="tab" ng-click="vm.selectMenu(2)">Dessert</a>
+    </li>
+    <li role="presentaion" ng-class="{active:vm.isSelected(3)}">
+        <a aria-controls=" all menu" role="tab" ng-click="vm.selectMenu(3)">Dinner</a>
+    </li>
+    <li role="presentaion" ng-class="{active:vm.isSelected(4)}">
+        <a aria-controls=" all menu" role="tab" ng-click="vm.selectMenu(4)">Burger</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <ul class="media-list tab-pane fade in active">
+        <li class="media" ng-repeat="menu in vm.menus | filter:vm.filtText">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object img-thumbnail" ng-src={{menu.image}} alt="menu image">
+                </a>
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading"> {{menu.name}}</h2>
+                <p>{{menu.description}}</p>
+            </div>
+        </li>
+    </ul>
 </div>
-<h2>Our Menu</h2>
